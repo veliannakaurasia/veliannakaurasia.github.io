@@ -14,7 +14,7 @@ function refresh() {
 if (!localStorage.getItem("name")) {
 	refresh();
 } else {
-	setName();
+	refresh();
 }
 
 myButton.onclick = function() {

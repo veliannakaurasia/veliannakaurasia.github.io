@@ -11,7 +11,7 @@ function refresh() {
 	setName();
 }
 
-if (localStorage.getItem("name") == "null") {
+if (!localStorage.getItem("name")) {
 	refresh();
 } else {
 	setName();

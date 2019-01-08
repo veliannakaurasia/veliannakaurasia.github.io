@@ -2,16 +2,16 @@ var myButton = document.querySelector("button");
 var heading = document.querySelector("h1");
 
 function setName() {
-	heading.textContent = "Tervetuloa, " + localStorage.getItem("name");
+	heading.textContent = "Tervetuloa, " + localStorage.getItem("nimi");
 }
 
 function refresh() {
-	var userInput = prompt("What is your name?");
-	localStorage.setItem("name", userInput);
+	var userInput = prompt("Anna käyttäjänimi:");
+	localStorage.setItem("nimi", userInput);
 	setName();
 }
 
-if (!localStorage.getItem("name")) {
+if (!localStorage.getItem("nimi")) {
 	refresh();
 } else {
 	setName();
